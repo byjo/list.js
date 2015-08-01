@@ -1,8 +1,6 @@
 <html>
 <head>
 	<title></title>
-	<script type="text/javascript" src="jquery-1.11.3.js"></script>
-	<script type="text/javascript" src="list.js"></script>
 </head>
 <body>
 	<input id="listContent"></input>
@@ -15,5 +13,22 @@
 			<span>{{content}}</span>
 		</li>
 	</ul>
+	<script type="text/javascript" src="jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="list.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var list = new List();
+			var ul = document.getElementById("list");
+			var btnAdd = document.getElementById("add");
+			var btnDel = document.getElementById("remove");
+
+			list.init(ul, btnAdd, btnDel);
+
+			// list.init(ul);
+			// document.getElementById("add").addEventListener("click", list.add);
+			// document.getElementById("remove").addEventListener("click", list.remove);
+
+		})	
+	</script>
 </body>
 </html>
