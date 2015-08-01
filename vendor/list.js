@@ -52,5 +52,7 @@
 		// template 에 적용 
 	}
 
+	window.Listyo = List;
+
 })();
 
